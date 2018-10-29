@@ -48,7 +48,42 @@ function statsResult(data)
 {
 	if (data.exists)
 	{
-		console.log("User online for " + data.time);
+		var time = Math.floor(data.time);
+		
+		var days = Math.floor(time / (60 * 60 * 24));
+		
+		time = time % (60 * 60 * 24);
+		var hours = Math.floor(time / (60 * 60));
+
+		time = time % (60 * 60);
+	    var minutes = Math.floor(time / 60);
+		
+	    time = time % 60;
+	    var seconds = Math.floor(time);
+		
+		if (days < 10)
+		{
+			days = "0" + days;
+		}
+		
+		if (hours < 10)
+		{
+			hours = "0" + hours;
+		}
+		
+		if (minutes < 10)
+		{
+			minutes = "0" + minutes;
+		}
+		
+		if (seconds < 10)
+		{
+			seconds = "0" + seconds;
+		}
+		
+		var str = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+		
+		console.log("User online for " + str);
 	}
 	else
 	{
