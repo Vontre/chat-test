@@ -1,4 +1,4 @@
-var services = require('./../../framework/services');
+const services = require('./../../framework/services');
 
 const WebSocket = require('ws');
 
@@ -69,9 +69,12 @@ function startup()
 
 function send(userId, route, data)
 {
-	var text = formatMessage(route, data);
-	
-	sendFns[userId](text);
+	if (sendFns[userId])
+	{
+		var text = formatMessage(route, data);
+		
+		sendFns[userId](text);
+	}
 }
 
 function sendToAll(route, data)

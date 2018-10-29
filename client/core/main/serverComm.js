@@ -41,9 +41,12 @@ function incoming(text)
 
 function send(route, data)
 {
-	data.__route = route;
+	if (ws)
+	{
+		data.__route = route;
 	
-	const text = JSON.stringify(data);
+		const text = JSON.stringify(data);
 	
-	ws.send(text);
+		ws.send(text);
+	}
 }

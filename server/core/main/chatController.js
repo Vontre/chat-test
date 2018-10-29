@@ -48,6 +48,10 @@ function enterMessage(userId, data)
 		console.log("ERROR tried to enter message with no name.");
 		return;
 	}
+	if (!data.message)
+	{
+		return;
+	}
 	
 	var message = {userId: userId, name: users[userId].name, message: data.message, time: util.time()};
 	

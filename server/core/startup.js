@@ -1,5 +1,5 @@
-var services = require('./../framework/services');
+const services = require('./../framework/services');
 
-var tcp = services.get('tcp');
+const tcp = services.get('tcp');
 
 tcp.startup();

@@ -7,7 +7,9 @@ map['tcp'] = './../core/main/tcp.js';
 map['messageRouter'] = './../core/main/messageRouter.js';
 map['chatController'] = './../core/main/chatController.js';
 
-exports.get = function(name)
+exports.get = get;
+
+function get(name)
 {
 	if (!map[name])
 		console.log("Service not found:" + name);
