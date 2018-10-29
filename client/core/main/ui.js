@@ -1,6 +1,7 @@
 var services = require('./../../framework/services');
 
 var serverComm = services.get('serverComm');
+var chatController = services.get('chatController');
 
 exports.start = start;
 
@@ -16,7 +17,7 @@ const run = async () => {
 		const answers = await askChat();
 		const { message } = answers;
 		
-		serverComm.send("enterMessage", {message: message});
+		chatController.enteredText(message);
 	}
 };
 

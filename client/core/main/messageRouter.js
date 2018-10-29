@@ -9,7 +9,8 @@ exports.routeMessage = routeMessage;
 const map =
 {
 	"recentMessages": chatController.recentMessages,
-	"messageReceived" : chatController.messageReceived
+	"messageReceived" : chatController.messageReceived,
+	"popularResult": chatController.popularResult
 };
 
 function routeMessage(route, data)

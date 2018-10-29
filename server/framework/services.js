@@ -1,6 +1,7 @@
 var map = {};
 
 map['startup'] = './../core/startup.js';
+map['util'] = './../framework/util.js';
 
 map['tcp'] = './../core/main/tcp.js';
 map['messageRouter'] = './../core/main/messageRouter.js';

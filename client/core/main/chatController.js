@@ -2,10 +2,15 @@ const services = require('./../../framework/services');
 
 const fs = require('fs');
 
+const serverComm = services.get('serverComm');
+
 // interface
 exports.startup = startup;
 exports.recentMessages = recentMessages;
 exports.messageReceived = messageReceived;
+exports.popularResult = popularResult;
+
+exports.enteredText = enteredText;
 
 
 // impl
@@ -30,6 +35,11 @@ function recentMessages(data)
 function messageReceived(data)
 {
 	displayMessage(data.message);
+}
+
+function popularResult(data)
+{
+	console.log("The most popular word is: " + data.word);
 }
 
 function profanityFilter(text)
@@ -61,4 +71,28 @@ function profanityFilter(text)
 function displayMessage(data)
 {
 	console.log(data.name + " says:     " + profanityFilter(data.message));
+}
+
+function enteredText(text)
+{
+	if (text[0] == '/')
+	{
+		var command = text.substring(1, text.length);
+		
+		sendCommand(command);
+	}
+	else
+	{
+		sendMessage(text);
+	}
+}
+
+function sendMessage(message)
+{
+	serverComm.send("enterMessage", {message: message});
+}
+
+function sendCommand(command)
+{
+	serverComm.send("enterCommand", {command: command});
 }
