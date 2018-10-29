@@ -13,7 +13,6 @@ const recentMessageCount = 50;
 var usernames = {};
 var messages = [];
 
-
 function setName(userId, data)
 {
 	usernames[userId] = data.name;

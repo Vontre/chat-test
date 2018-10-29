@@ -1,6 +1,7 @@
-var services = require('./../framework/services');
+const services = require('./../framework/services');
 
-var ui = services.get('ui');
+const ui = services.get('ui');
+const chatController = services.get('chatController');
 
-
+chatController.startup();
 ui.start();
