@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="node_modules/rxjs/symbol/|node_modules/rxjs/_esm2015/operators/|node_modules/rxjs/_esm5/operators/|node_modules/rxjs/_esm2015/internal-compatibility/|node_modules/rxjs/_esm5/testing/|node_modules/rxjs/operators/|node_modules/rxjs/internal/testing/|node_modules/through/|node_modules/rxjs/_esm2015/|node_modules/rxjs/_esm5/internal/scheduler/|node_modules/tmp/lib/|node_modules/rxjs/bundles/|node_modules/rxjs/_esm5/webSocket/|node_modules/mute-stream/coverage/lcov-report/|node_modules/safer-buffer/|node_modules/color-name/|node_modules/rxjs/_esm5/internal/observable/dom/|node_modules/inquirer/lib/|node_modules/rxjs/util/|node_modules/rxjs/_esm5/|node_modules/rxjs/_esm5/ajax/|node_modules/rxjs/_esm5/internal/operators/|node_modules/rxjs/_esm2015/internal/observable/|node_modules/rxjs/_esm2015/internal/scheduler/|node_modules/is-promise/|node_modules/escape-string-regexp/|node_modules/rxjs/_esm2015/webSocket/|node_modules/string-width/|node_modules/rxjs/_esm2015/internal/testing/|node_modules/external-editor/main/|node_modules/onetime/|node_modules/mute-stream/test/|node_modules/rxjs/_esm5/internal-compatibility/|node_modules/is-fullwidth-code-point/|node_modules/rxjs/_esm2015/internal/|node_modules/rxjs/internal/operators/|node_modules/ansi-regex/|node_modules/rxjs/internal/util/|node_modules/inquirer/lib/prompts/|node_modules/inquirer/lib/objects/|node_modules/rxjs/_esm5/internal/testing/|node_modules/rxjs/ajax/|node_modules/mute-stream/|node_modules/supports-color/|node_modules/rxjs/add/operator/|node_modules/rxjs/_esm2015/internal/observable/dom/|node_modules/rxjs/_esm2015/ajax/|node_modules/ansi-escapes/|node_modules/figures/|node_modules/rxjs/_esm5/internal/util/|node_modules/iconv-lite/encodings/|node_modules/signal-exit/|node_modules/rxjs/_esm5/internal/symbol/|node_modules/rxjs/_esm2015/internal/util/|node_modules/rxjs/internal/symbol/|node_modules/rxjs/observable/dom/|node_modules/os-tmpdir/|node_modules/rxjs/internal/|node_modules/external-editor/main/errors/|node_modules/rxjs/operator/|node_modules/ansi-styles/|node_modules/rxjs/add/observable/dom/|node_modules/inquirer/lib/ui/|node_modules/cli-width/|node_modules/through/test/|node_modules/lodash/|node_modules/inquirer/lib/utils/|node_modules/rxjs/_esm2015/internal/symbol/|node_modules/restore-cursor/|node_modules/rxjs/src/|node_modules/rxjs/_esm2015/testing/|node_modules/rxjs/_esm2015/internal/operators/|node_modules/rxjs/internal/observable/|node_modules/rxjs/|node_modules/rxjs/internal/observable/dom/|node_modules/external-editor/|node_modules/rxjs/migrations/update-6_0_0/|node_modules/rxjs/add/observable/|node_modules/tslib/|node_modules/has-flag/|node_modules/rxjs/internal-compatibility/|node_modules/rxjs/testing/|node_modules/color-convert/|node_modules/iconv-lite/lib/|node_modules/rxjs/internal/scheduler/|node_modules/chardet/|node_modules/rxjs/_esm5/internal/|node_modules/rxjs/_esm5/internal/observable/|node_modules/strip-ansi/|node_modules/rxjs/webSocket/|node_modules/chardet/encoding/|node_modules/rxjs/scheduler/|node_modules/cli-cursor/|node_modules/chalk/|node_modules/rxjs/observable/|node_modules/run-async/|node_modules/mimic-fn/|node_modules/lodash/fp/" kind="src" path="client"/>
+	<classpathentry kind="src" path="client/node_modules/ansi-escapes"/>
+	<classpathentry kind="src" path="client/node_modules/ansi-regex"/>
+	<classpathentry kind="src" path="client/node_modules/ansi-styles"/>
+	<classpathentry kind="src" path="client/node_modules/chalk"/>
+	<classpathentry excluding="encoding/" kind="src" path="client/node_modules/chardet"/>
+	<classpathentry kind="src" path="client/node_modules/chardet/encoding"/>
+	<classpathentry kind="src" path="client/node_modules/cli-cursor"/>
+	<classpathentry kind="src" path="client/node_modules/cli-width"/>
+	<classpathentry kind="src" path="client/node_modules/color-convert"/>
+	<classpathentry kind="src" path="client/node_modules/color-name"/>
+	<classpathentry kind="src" path="client/node_modules/escape-string-regexp"/>
+	<classpathentry excluding="main/|main/errors/" kind="src" path="client/node_modules/external-editor"/>
+	<classpathentry excluding="errors/" kind="src" path="client/node_modules/external-editor/main"/>
+	<classpathentry kind="src" path="client/node_modules/external-editor/main/errors"/>
+	<classpathentry kind="src" path="client/node_modules/figures"/>
+	<classpathentry kind="src" path="client/node_modules/has-flag"/>
+	<classpathentry kind="src" path="client/node_modules/iconv-lite/encodings"/>
+	<classpathentry kind="src" path="client/node_modules/iconv-lite/lib"/>
+	<classpathentry excluding="prompts/|objects/|ui/|utils/" kind="src" path="client/node_modules/inquirer/lib"/>
+	<classpathentry kind="src" path="client/node_modules/inquirer/lib/objects"/>
+	<classpathentry kind="src" path="client/node_modules/inquirer/lib/prompts"/>
+	<classpathentry kind="src" path="client/node_modules/inquirer/lib/ui"/>
+	<classpathentry kind="src" path="client/node_modules/inquirer/lib/utils"/>
+	<classpathentry kind="src" path="client/node_modules/is-fullwidth-code-point"/>
+	<classpathentry kind="src" path="client/node_modules/is-promise"/>
+	<classpathentry excluding="fp/" kind="src" path="client/node_modules/lodash"/>
+	<classpathentry kind="src" path="client/node_modules/lodash/fp"/>
+	<classpathentry kind="src" path="client/node_modules/mimic-fn"/>
+	<classpathentry excluding="coverage/lcov-report/|test/" kind="src" path="client/node_modules/mute-stream"/>
+	<classpathentry kind="src" path="client/node_modules/mute-stream/coverage/lcov-report"/>
+	<classpathentry kind="src" path="client/node_modules/mute-stream/test"/>
+	<classpathentry kind="src" path="client/node_modules/onetime"/>
+	<classpathentry kind="src" path="client/node_modules/os-tmpdir"/>
+	<classpathentry kind="src" path="client/node_modules/restore-cursor"/>
+	<classpathentry kind="src" path="client/node_modules/run-async"/>
+	<classpathentry excluding="symbol/|_esm2015/operators/|_esm5/operators/|_esm2015/internal-compatibility/|_esm5/testing/|operators/|internal/testing/|_esm2015/|_esm5/internal/scheduler/|bundles/|_esm5/webSocket/|_esm5/internal/observable/dom/|util/|_esm5/|_esm5/ajax/|_esm5/internal/operators/|_esm2015/internal/observable/|_esm2015/internal/scheduler/|_esm2015/webSocket/|_esm2015/internal/testing/|_esm5/internal-compatibility/|_esm2015/internal/|internal/operators/|internal/util/|_esm5/internal/testing/|ajax/|add/operator/|_esm2015/internal/observable/dom/|_esm2015/ajax/|_esm5/internal/util/|_esm5/internal/symbol/|_esm2015/internal/util/|internal/symbol/|observable/dom/|internal/|operator/|add/observable/dom/|_esm2015/internal/symbol/|src/|_esm2015/testing/|_esm2015/internal/operators/|internal/observable/|internal/observable/dom/|migrations/update-6_0_0/|add/observable/|internal-compatibility/|testing/|internal/scheduler/|_esm5/internal/|_esm5/internal/observable/|webSocket/|scheduler/|observable/" kind="src" path="client/node_modules/rxjs"/>
+	<classpathentry excluding="operators/|internal-compatibility/|internal/observable/|internal/scheduler/|webSocket/|internal/testing/|internal/|internal/observable/dom/|ajax/|internal/util/|internal/symbol/|testing/|internal/operators/" kind="src" path="client/node_modules/rxjs/_esm2015"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm2015/ajax"/>
+	<classpathentry excluding="observable/|scheduler/|testing/|observable/dom/|util/|symbol/|operators/" kind="src" path="client/node_modules/rxjs/_esm2015/internal"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm2015/internal-compatibility"/>
+	<classpathentry excluding="dom/" kind="src" path="client/node_modules/rxjs/_esm2015/internal/observable"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm2015/internal/observable/dom"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm2015/internal/operators"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm2015/internal/scheduler"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm2015/internal/symbol"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm2015/internal/testing"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm2015/internal/util"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm2015/operators"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm2015/testing"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm2015/webSocket"/>
+	<classpathentry excluding="operators/|testing/|internal/scheduler/|webSocket/|internal/observable/dom/|ajax/|internal/operators/|internal-compatibility/|internal/testing/|internal/util/|internal/symbol/|internal/|internal/observable/" kind="src" path="client/node_modules/rxjs/_esm5"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm5/ajax"/>
+	<classpathentry excluding="scheduler/|observable/dom/|operators/|testing/|util/|symbol/|observable/" kind="src" path="client/node_modules/rxjs/_esm5/internal"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm5/internal-compatibility"/>
+	<classpathentry excluding="dom/" kind="src" path="client/node_modules/rxjs/_esm5/internal/observable"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm5/internal/observable/dom"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm5/internal/operators"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm5/internal/scheduler"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm5/internal/symbol"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm5/internal/testing"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm5/internal/util"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm5/operators"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm5/testing"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/_esm5/webSocket"/>
+	<classpathentry excluding="dom/" kind="src" path="client/node_modules/rxjs/add/observable"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/add/observable/dom"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/add/operator"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/ajax"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/bundles"/>
+	<classpathentry excluding="testing/|operators/|util/|symbol/|observable/|observable/dom/|scheduler/" kind="src" path="client/node_modules/rxjs/internal"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/internal-compatibility"/>
+	<classpathentry excluding="dom/" kind="src" path="client/node_modules/rxjs/internal/observable"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/internal/observable/dom"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/internal/operators"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/internal/scheduler"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/internal/symbol"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/internal/testing"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/internal/util"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/migrations/update-6_0_0"/>
+	<classpathentry excluding="dom/" kind="src" path="client/node_modules/rxjs/observable"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/observable/dom"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/operator"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/operators"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/scheduler"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/src"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/symbol"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/testing"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/util"/>
+	<classpathentry kind="src" path="client/node_modules/rxjs/webSocket"/>
+	<classpathentry kind="src" path="client/node_modules/safer-buffer"/>
+	<classpathentry kind="src" path="client/node_modules/signal-exit"/>
+	<classpathentry kind="src" path="client/node_modules/string-width"/>
+	<classpathentry kind="src" path="client/node_modules/strip-ansi"/>
+	<classpathentry kind="src" path="client/node_modules/supports-color"/>
+	<classpathentry excluding="test/" kind="src" path="client/node_modules/through"/>
+	<classpathentry kind="src" path="client/node_modules/through/test"/>
+	<classpathentry kind="src" path="client/node_modules/tmp/lib"/>
+	<classpathentry kind="src" path="client/node_modules/tslib"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
