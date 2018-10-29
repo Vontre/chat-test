@@ -2,6 +2,8 @@ var services = require('./../../framework/services');
 
 const WebSocket = require('ws');
 
+const messageRouter = services.get('messageRouter');
+
 var ws;
 
 // interface
@@ -34,20 +36,16 @@ function incoming(text)
 	} catch(err) {
 	}
 	
-	if (data && data.route)
+	if (data && data.__route)
 	{
-		routeMessage(data.route, data);
+		messageRouter.routeMessage(data.__route, data);
 	}
-}
-
-function routeMessage(route, data)
-{
-	
 }
 
 function send(route, data)
 {
-	data.route = route;
+	console.log("Send route " + route);
+	data.__route = route;
 	
 	var text = JSON.stringify(data);
 	

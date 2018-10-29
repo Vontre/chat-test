@@ -6,10 +6,13 @@ const messageRouter = services.get('messageRouter');
 
 // interface
 exports.startup = startup;
+exports.send = send;
 
 // impl
 var ws;
 var userIdTick = 0;
+
+var sendFns = {};
 
 function startup()
 {
@@ -34,12 +37,26 @@ function startup()
 			} catch(err) {
 			}
 			
-			if (data && data.route)
+			if (data && data.__route)
 			{
-				messageRouter.routeMessage(userId, data.route, data);
+				messageRouter.routeMessage(userId, data.__route, data);
 			}
 		});
 		
-		//conn.send('something');
+		function rawSend(text)
+		{
+			conn.send(text);
+		}
+		
+		sendFns[userId] = rawSend;
 	});
+}
+
+function send(userId, route, data)
+{
+	data.__route = route;
+	
+	var text = JSON.stringify(data);
+	
+	sendFns[userId](text);
 }

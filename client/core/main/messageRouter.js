@@ -1,12 +1,14 @@
 var services = require('./../../framework/services');
 
-var chatHandler = services.get('chatHandler');
+var chatController = services.get('chatController');
 
+// interface
 exports.routeMessage = routeMessage;
 
+// impl
 const map =
 {
-	"testroute": chatHandler.test
+	"recentMessages": chatController.recentMessages
 };
 
 function routeMessage(route, data)
