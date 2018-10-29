@@ -27,9 +27,6 @@ function startup()
 		
 		conn.on('message', function incoming(text)
 		{
-			console.log("Received data");
-			console.log(text);
-			
 			var data;
 			
 			try
@@ -44,9 +41,26 @@ function startup()
 			}
 		});
 		
+		conn.on('close', function fn(text)
+		{
+			delete sendFns[userId];
+			
+			messageRouter.routeMessage(userId, "___connection_closed", null);
+		});
+		
 		function rawSend(text)
 		{
-			conn.send(text);
+			conn.send(text, function ack(error)
+			{
+				  // If error is not defined, the send has been completed, otherwise the error
+				  // object will indicate what failed.
+				
+				if (error)
+				{
+					console.log("Send error");
+					console.log(error);
+				}
+			});
 		}
 		
 		sendFns[userId] = rawSend;

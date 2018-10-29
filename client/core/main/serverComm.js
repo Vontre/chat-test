@@ -1,4 +1,4 @@
-var services = require('./../../framework/services');
+const services = require('./../../framework/services');
 
 const WebSocket = require('ws');
 
@@ -25,9 +25,6 @@ function connect(callback)
 
 function incoming(text)
 {
-	console.log("Received data");
-	console.log(text);
-	
 	var data;
 	
 	try
@@ -44,10 +41,9 @@ function incoming(text)
 
 function send(route, data)
 {
-	console.log("Send route " + route);
 	data.__route = route;
 	
-	var text = JSON.stringify(data);
+	const text = JSON.stringify(data);
 	
 	ws.send(text);
 }

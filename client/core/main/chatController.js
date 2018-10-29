@@ -8,7 +8,9 @@ const serverComm = services.get('serverComm');
 exports.startup = startup;
 exports.recentMessages = recentMessages;
 exports.messageReceived = messageReceived;
+
 exports.popularResult = popularResult;
+exports.statsResult = statsResult;
 
 exports.enteredText = enteredText;
 
@@ -39,7 +41,19 @@ function messageReceived(data)
 
 function popularResult(data)
 {
-	console.log("The most popular word is: " + data.word);
+	console.log("The most popular word is: " + data.word + ".");
+}
+
+function statsResult(data)
+{
+	if (data.exists)
+	{
+		console.log("User online for " + data.time);
+	}
+	else
+	{
+		console.log("User not found.");
+	}
 }
 
 function profanityFilter(text)

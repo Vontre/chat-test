@@ -7,31 +7,49 @@ const util = services.get('util');
 exports.setName = setName;
 exports.enterMessage = enterMessage;
 exports.enterCommand = enterCommand;
+exports.connectionClosed = connectionClosed;
 
 
 // impl
 const recentMessageCount = 50;
 const popularTime = 30;
 
-var usernames = {};
+var users = {};
+var userNameIndex = {};
 var messages = [];
 
 function setName(userId, data)
 {
-	usernames[userId] = data.name;
-	
-	sendRecentMessages(userId);
+	if (data.name)
+	{
+		users[userId] = {name: data.name, time: util.time()};
+		
+		userNameIndex[data.name.toLowerCase()] = userId;
+		
+		sendRecentMessages(userId);
+	}
+}
+
+function connectionClosed(userId, unused)
+{
+	if (users[userId])
+	{
+		var user = users[userId];
+		
+		delete userNameIndex[user.name.toLowerCase()];
+		delete users[userId];
+	}
 }
 
 function enterMessage(userId, data)
 {
-	if (!usernames[userId])
+	if (!users[userId])
 	{
 		console.log("ERROR tried to enter message with no name.");
 		return;
 	}
 	
-	var message = {userId: userId, name: usernames[userId], message: data.message, time: util.time()};
+	var message = {userId: userId, name: users[userId].name, message: data.message, time: util.time()};
 	
 	messages.push(message);
 	
@@ -50,15 +68,47 @@ function prune()
 
 function enterCommand(userId, data)
 {
-	if (data.command == 'popular')
+	if (data.command)
 	{
-		var word = getPopularWord();
-		
-		tcp.send(userId, "popularResult", {word: word});
+		if (data.command == 'popular')
+		{
+			var word = getPopularWord();
+			
+			tcp.send(userId, "popularResult", {word: word});
+		}
+		else if (data.command.indexOf('stats') == 0)
+		{
+			statsCommand(userId, data.command);
+		}
+	}
+}
+
+function statsCommand(userId, command)
+{
+	var split = command.split(' ');
+	
+	var username = split[1];
+	if (username)
+	{
+		username = username.toLowerCase();
+	}
+	
+	var result = {};
+	
+	if (!username || !userNameIndex[username])
+	{
+		result.exists = false;
 	}
 	else
 	{
+		result.exists = true;
+		
+		var time = util.time() - users[userNameIndex[username]].time;
+		
+		result.time = time;
 	}
+	
+	tcp.send(userId, "statsResult", result);
 }
 
 function getPopularWord()

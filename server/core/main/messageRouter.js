@@ -8,7 +8,8 @@ const map =
 {
 		'setName' : chatController.setName,
 		'enterMessage': chatController.enterMessage,
-		'enterCommand': chatController.enterCommand
+		'enterCommand': chatController.enterCommand,
+		'___connection_closed': chatController.connectionClosed
 };
 
 function routeMessage(userId, route, data)

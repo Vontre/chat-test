@@ -1,6 +1,6 @@
-var services = require('./../../framework/services');
+const services = require('./../../framework/services');
 
-var chatController = services.get('chatController');
+const chatController = services.get('chatController');
 
 // interface
 exports.routeMessage = routeMessage;
@@ -8,9 +8,10 @@ exports.routeMessage = routeMessage;
 // impl
 const map =
 {
-	"recentMessages": chatController.recentMessages,
-	"messageReceived" : chatController.messageReceived,
-	"popularResult": chatController.popularResult
+	'recentMessages': chatController.recentMessages,
+	'messageReceived' : chatController.messageReceived,
+	'popularResult': chatController.popularResult,
+	'statsResult': chatController.statsResult
 };
 
 function routeMessage(route, data)
