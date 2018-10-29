@@ -7,6 +7,7 @@ const messageRouter = services.get('messageRouter');
 // interface
 exports.startup = startup;
 exports.send = send;
+exports.sendToAll = sendToAll;
 
 // impl
 var ws;
@@ -54,9 +55,24 @@ function startup()
 
 function send(userId, route, data)
 {
-	data.__route = route;
-	
-	var text = JSON.stringify(data);
+	var text = formatMessage(route, data);
 	
 	sendFns[userId](text);
+}
+
+function sendToAll(route, data)
+{
+	var text = formatMessage(route, data);
+	
+	for (var userId in sendFns)
+	{
+		sendFns[userId](text);
+	}
+}
+
+function formatMessage(route, data)
+{
+	data.__route = route;
+	
+	return JSON.stringify(data);
 }

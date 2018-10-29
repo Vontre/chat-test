@@ -33,7 +33,7 @@ function enterMessage(userId, data)
 	
 	messages.push(message);
 	
-	console.log(messages);
+	tcp.sendToAll("messageReceived", {message: message});
 }
 
 function sendRecentMessages(userId)

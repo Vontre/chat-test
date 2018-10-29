@@ -8,7 +8,8 @@ exports.routeMessage = routeMessage;
 // impl
 const map =
 {
-	"recentMessages": chatController.recentMessages
+	"recentMessages": chatController.recentMessages,
+	"messageReceived" : chatController.messageReceived
 };
 
 function routeMessage(route, data)
