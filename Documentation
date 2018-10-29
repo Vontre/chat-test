@@ -1,14 +1,27 @@
+SYSTEM DESIGN
+
 This chat service is an EXTREMELY BASIC DEMO, and would not function well in a real environment.
 
 It does not handle message ordering, disconnects, error handling, message redundancy, or rate limiting; it only works reliably in a localhost demo environment.
 
+A light service-locator framework and division of responsibility between node modules (sort of treated as classes) was used to organize the code and keep it maintainable.
+
 
 SCALABILITY
 
-As long as concurrent users have a strict cap this should slot nicely into a horizontally scalable system in which another server authority assigns users to different chat servers.
+As long as concurrent users has a strict cap this should slot nicely into a horizontally scalable system in which another server authority assigns users to different chat servers.
 
 Data transmission scales by n-squared, so want to test upper bound of users in chat room. If extremely large chat required (e.g. Twitch chat), might have to rate limit total incoming text.
 
 Could potentially have multiple chat rooms per node process, but that is outside the scope of this exercise.
 
 The 'popular' function might be a bit CPU heavy, should rate-limit and evaluate.
+
+
+PACKAGES
+
+Only npm packages added were 'ava' and 'ws', no other packages needed.
+
+UNIT TESTING
+
+Client and server have basic test.js file testing module interface paths directly using ava. Enter 'npm test' in the command line to execute.

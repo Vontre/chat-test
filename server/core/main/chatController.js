@@ -115,6 +115,8 @@ function statsCommand(userId, command)
 	tcp.send(userId, "statsResult", result);
 }
 
+// We could potentially be caching information here.
+// However, this feature is extremely unlikely to actually be used, so it's probably more efficient to isolate its performance overhead rather than maintain a cache.
 function getPopularWord()
 {
 	var minTime = util.time() - popularTime;
