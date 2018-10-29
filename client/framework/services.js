@@ -2,9 +2,9 @@ var map = {};
 
 map['startup'] = './../core/startup.js';
 
-map['tcp'] = './../core/main/tcp.js';
+map['serverComm'] = './../core/main/serverComm.js';
 map['messageRouter'] = './../core/main/messageRouter.js';
-map['chatController'] = './../core/main/chatController.js';
+map['ui'] = './../core/main/ui.js';
 
 exports.get = function(name)
 {

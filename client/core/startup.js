@@ -1,6 +1,6 @@
 var services = require('./../framework/services');
 
-var tcp = services.get('tcp');
+var ui = services.get('ui');
 
 
-tcp.startup();
+ui.start();
